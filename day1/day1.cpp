@@ -5,19 +5,18 @@
 #include <stdlib.h>
 
 int main() {
-    std::vector<int> vector1;
-    std::vector<int> vector2;
-
+    std::vector<int> left;
+    std::vector<int> right;
     int a, b;
     while (std::cin >> a >> b) {
-        vector1.push_back(a);
-        vector2.push_back(b);
+        left.push_back(a);
+        right.push_back(b);
     }
-    std::sort (vector1.begin(), vector1.end());
-    std::sort (vector2.begin(), vector2.end());
+    std::sort (left.begin(), left.end());
+    std::sort (right.begin(), right.end());
     int sum = 0;
-    for(int i = 0; i < vector1.size(); i++) {
-        sum += abs(vector1[i] - vector2[i]);
+    for(int i = 0; i < left.size(); i++) {
+        sum += abs(left[i] - right[i]);
     }
     std::cout << sum << std::endl;
     return 0;

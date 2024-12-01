@@ -6,17 +6,17 @@
 #include <map>
 
 int main() {
-    std::vector<int> vector1;
-    std::map<int, int > map2;
+    std::vector<int> left;
+    std::map<int, int > map_right;
     int a, b;
     while (std::cin >> a >> b) {
-        vector1.push_back(a);
-        map2[b]++;
+        left.push_back(a);
+        map_right[b]++;
     }
     int sum = 0;
-    for (auto const& key : vector1) {
-        if (map2.find(key) != map2.end()) {
-            sum += key * map2[key];
+    for (auto const& key : left) {
+        if (map_right.find(key) != map_right.end()) {
+            sum += key * map_right[key];
         } 
     }
     std::cout << sum << std::endl;
