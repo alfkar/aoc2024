@@ -48,7 +48,6 @@ int main() {
         }
     }
     std::cout << safeCounter << "\n";
-    std::cout << "target 476" << "\n";
     return 0;
 }
 
