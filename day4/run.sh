@@ -1,0 +1,5 @@
+SOURCE_FILE=$1
+INPUT_FILE=$2
+
+g++ -o bin $SOURCE_FILE
+./bin < $INPUT_FILE
